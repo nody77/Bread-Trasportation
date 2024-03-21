@@ -29,11 +29,12 @@ namespace Problem
             //REMOVE THIS LINE BEFORE START CODING
             //throw new NotImplementedException();
 
-            int work = 0;
+            /*int work_units = 0;
+           
             List<int> suppliers = new List<int>();
             List<int> demanders = new List<int>();
 
-            Parallel.For(0, N, i =>
+            for (int i = 0; i < N; i++)
             {
                 if (DemandPerHouse[i] > 0)
                 {
@@ -43,32 +44,22 @@ namespace Problem
                 {
                     demanders.Add(i);
                 }
-            });
-
-            /*for (int i = 0; i < N; i++)
-            {
-                if (DemandPerHouse[i] > 0)
-                {
-                    suppliers.Add(i);
-                }
-                else if (DemandPerHouse[i] < 0)
-                {
-                    demanders.Add(i);
-                }
-            }*/
+            }
 
             int s = 0, d = 0;
             while (s < suppliers.Count && d < demanders.Count)
             {
-                int distance, trade = 0;
+                int distance_between_the_houses, trade = 0;
+
                 if(suppliers[s] - demanders[d] < 0)
                 {
-                    distance = -1 * (suppliers[s] - demanders[d]);
+                    distance_between_the_houses = -1 * (suppliers[s] - demanders[d]);
                 }
                 else
                 {
-                    distance = suppliers[s] - demanders[d];
+                    distance_between_the_houses = suppliers[s] - demanders[d];
                 }
+
                 if (DemandPerHouse[suppliers[s]] <= -1 * DemandPerHouse[demanders[d]])
                 {
                     trade = DemandPerHouse[suppliers[s]];
@@ -77,16 +68,54 @@ namespace Problem
                 {
                     trade = DemandPerHouse[demanders[d]];
                 }
-                work += trade * distance;
+
+                work_units += trade * distance_between_the_houses;
 
                 DemandPerHouse[suppliers[s]] -= trade;
                 DemandPerHouse[demanders[d]] += trade;
 
-                if (DemandPerHouse[suppliers[s]] == 0) s++;
-                if (DemandPerHouse[demanders[d]] == 0) d++;
+                if (DemandPerHouse[suppliers[s]] == 0) 
+                { 
+                    s++; 
+                }
+                if (DemandPerHouse[demanders[d]] == 0) 
+                { 
+                    d++; 
+                }
             }
+            return work_units;*/
 
-            return work;
+            int i = 0, j = 0, steps = 0, temp = 0, work_units = 0;
+            while (temp < N - 1)
+            {
+                while (j < N && DemandPerHouse[j] >= 0)
+                {
+                    j++;
+                }
+                while (i < N && DemandPerHouse[i] <= 0)
+                {
+                    i++;
+                }
+                if (i == N || j == N)
+                {
+                    break;
+                }
+                steps = Math.Abs(j - i);
+                if (Math.Abs(DemandPerHouse[j]) <= DemandPerHouse[i])
+                {
+                    work_units += steps * Math.Abs(DemandPerHouse[j]);
+                    DemandPerHouse[i] += DemandPerHouse[j];
+                    DemandPerHouse[j] = 0;
+                }
+                else
+                {
+                    work_units += steps * DemandPerHouse[i];
+                    DemandPerHouse[j] += DemandPerHouse[i];
+                    DemandPerHouse[i] = 0;
+                }
+                temp++;
+            }
+            return work_units;
         }
         #endregion
     }
