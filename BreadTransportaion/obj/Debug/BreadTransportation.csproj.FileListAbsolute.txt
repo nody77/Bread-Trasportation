@@ -36,3 +36,12 @@ E:\COURSES\Algorithms\[1] [ALL PROBLEMS - CODE]\UNIFIED OUTPUT\GREEDY\[U] Bread 
 E:\COURSES\Algorithms\[1] [ALL PROBLEMS - CODE]\UNIFIED OUTPUT\GREEDY\[U] Bread Transportation\[TEMPLATE]\BreadTransportaion\obj\Debug\BreadTransportation.csproj.CoreCompileInputs.cache
 E:\COURSES\Algorithms\[1] [ALL PROBLEMS - CODE]\UNIFIED OUTPUT\GREEDY\[U] Bread Transportation\[TEMPLATE]\BreadTransportaion\obj\Debug\BreadTransportation.exe
 E:\COURSES\Algorithms\[1] [ALL PROBLEMS - CODE]\UNIFIED OUTPUT\GREEDY\[U] Bread Transportation\[TEMPLATE]\BreadTransportaion\obj\Debug\BreadTransportation.pdb
+F:\Year 3 2nd term\Analysis and Design of Algorithm\Assignments\Assignment 2\[U] BreadTransportation\Bread-Trasportation\BreadTransportaion\bin\Debug\BreadTransportation.exe.config
+F:\Year 3 2nd term\Analysis and Design of Algorithm\Assignments\Assignment 2\[U] BreadTransportation\Bread-Trasportation\BreadTransportaion\bin\Debug\BreadTransportation.exe
+F:\Year 3 2nd term\Analysis and Design of Algorithm\Assignments\Assignment 2\[U] BreadTransportation\Bread-Trasportation\BreadTransportaion\bin\Debug\BreadTransportation.pdb
+F:\Year 3 2nd term\Analysis and Design of Algorithm\Assignments\Assignment 2\[U] BreadTransportation\Bread-Trasportation\BreadTransportaion\obj\Debug\BreadTransportation.csproj.AssemblyReference.cache
+F:\Year 3 2nd term\Analysis and Design of Algorithm\Assignments\Assignment 2\[U] BreadTransportation\Bread-Trasportation\BreadTransportaion\obj\Debug\BreadTransportation.Properties.Resources.resources
+F:\Year 3 2nd term\Analysis and Design of Algorithm\Assignments\Assignment 2\[U] BreadTransportation\Bread-Trasportation\BreadTransportaion\obj\Debug\BreadTransportation.csproj.GenerateResource.cache
+F:\Year 3 2nd term\Analysis and Design of Algorithm\Assignments\Assignment 2\[U] BreadTransportation\Bread-Trasportation\BreadTransportaion\obj\Debug\BreadTransportation.csproj.CoreCompileInputs.cache
+F:\Year 3 2nd term\Analysis and Design of Algorithm\Assignments\Assignment 2\[U] BreadTransportation\Bread-Trasportation\BreadTransportaion\obj\Debug\BreadTransportation.exe
+F:\Year 3 2nd term\Analysis and Design of Algorithm\Assignments\Assignment 2\[U] BreadTransportation\Bread-Trasportation\BreadTransportaion\obj\Debug\BreadTransportation.pdb

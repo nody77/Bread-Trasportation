@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Year 3 2nd term\\Analysis and Design of Algorithm\\Assignments\\Assignment 2\\[U] BreadTransportation\\Bread-Trasportation\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A1119DE-3E7E-47F7-B32C-C8A9B28EA6CD}|BreadTransportaion\\BreadTransportation.csproj|f:\\year 3 2nd term\\analysis and design of algorithm\\assignments\\assignment 2\\[u] breadtransportation\\bread-trasportation\\breadtransportaion\\problem_class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A1119DE-3E7E-47F7-B32C-C8A9B28EA6CD}|BreadTransportaion\\BreadTransportation.csproj|solutionrelative:breadtransportaion\\problem_class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A1119DE-3E7E-47F7-B32C-C8A9B28EA6CD}|BreadTransportaion\\BreadTransportation.csproj|F:\\Year 3 2nd term\\Analysis and Design of Algorithm\\Assignments\\Assignment 2\\[U] BreadTransportation\\Bread-Trasportation\\breadtransportaion\\btproblem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A1119DE-3E7E-47F7-B32C-C8A9B28EA6CD}|BreadTransportaion\\BreadTransportation.csproj|solutionrelative:breadtransportaion\\btproblem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BTProblem.cs",
+              "DocumentMoniker": "F:\\Year 3 2nd term\\Analysis and Design of Algorithm\\Assignments\\Assignment 2\\[U] BreadTransportation\\Bread-Trasportation\\BreadTransportaion\\BTProblem.cs",
+              "RelativeDocumentMoniker": "BreadTransportaion\\BTProblem.cs",
+              "ToolTip": "F:\\Year 3 2nd term\\Analysis and Design of Algorithm\\Assignments\\Assignment 2\\[U] BreadTransportation\\Bread-Trasportation\\BreadTransportaion\\BTProblem.cs",
+              "RelativeToolTip": "BreadTransportaion\\BTProblem.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T06:52:15.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PROBLEM_CLASS.cs",
+              "DocumentMoniker": "F:\\Year 3 2nd term\\Analysis and Design of Algorithm\\Assignments\\Assignment 2\\[U] BreadTransportation\\Bread-Trasportation\\BreadTransportaion\\PROBLEM_CLASS.cs",
+              "RelativeDocumentMoniker": "BreadTransportaion\\PROBLEM_CLASS.cs",
+              "ToolTip": "F:\\Year 3 2nd term\\Analysis and Design of Algorithm\\Assignments\\Assignment 2\\[U] BreadTransportation\\Bread-Trasportation\\BreadTransportaion\\PROBLEM_CLASS.cs",
+              "RelativeToolTip": "BreadTransportaion\\PROBLEM_CLASS.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAuwC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T08:22:13.582Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
