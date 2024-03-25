@@ -28,94 +28,44 @@ namespace Problem
         {
             //REMOVE THIS LINE BEFORE START CODING
             //throw new NotImplementedException();
-
-            /*int work_units = 0;
-           
-            List<int> suppliers = new List<int>();
-            List<int> demanders = new List<int>();
-
-            for (int i = 0; i < N; i++)
+            Int64 work_done = 0;
+            Stack<Int64> demanders = new Stack<Int64>();
+            for (int i = N - 1; i >= 0; i--)
             {
-                if (DemandPerHouse[i] > 0)
+                if (DemandPerHouse[i] < 0)
                 {
-                    suppliers.Add(i);
-                }
-                else if (DemandPerHouse[i] < 0)
-                {
-                    demanders.Add(i);
+                    demanders.Push((Int64)i);
                 }
             }
-
-            int s = 0, d = 0;
-            while (s < suppliers.Count && d < demanders.Count)
+            int s = 0;
+            while (s < N)
             {
-                int distance_between_the_houses, trade = 0;
-
-                if(suppliers[s] - demanders[d] < 0)
-                {
-                    distance_between_the_houses = -1 * (suppliers[s] - demanders[d]);
-                }
-                else
-                {
-                    distance_between_the_houses = suppliers[s] - demanders[d];
-                }
-
-                if (DemandPerHouse[suppliers[s]] <= -1 * DemandPerHouse[demanders[d]])
-                {
-                    trade = DemandPerHouse[suppliers[s]];
-                }
-                else if (DemandPerHouse[suppliers[s]] > -1 * DemandPerHouse[demanders[d]])
-                {
-                    trade = DemandPerHouse[demanders[d]];
-                }
-
-                work_units += trade * distance_between_the_houses;
-
-                DemandPerHouse[suppliers[s]] -= trade;
-                DemandPerHouse[demanders[d]] += trade;
-
-                if (DemandPerHouse[suppliers[s]] == 0) 
-                { 
-                    s++; 
-                }
-                if (DemandPerHouse[demanders[d]] == 0) 
-                { 
-                    d++; 
-                }
-            }
-            return work_units;*/
-
-            int i = 0, j = 0, steps = 0, temp = 0, work_units = 0;
-            while (temp < N - 1)
-            {
-                while (j < N && DemandPerHouse[j] >= 0)
-                {
-                    j++;
-                }
-                while (i < N && DemandPerHouse[i] <= 0)
-                {
-                    i++;
-                }
-                if (i == N || j == N)
+                if (demanders.Count == 0)
                 {
                     break;
                 }
-                steps = Math.Abs(j - i);
-                if (Math.Abs(DemandPerHouse[j]) <= DemandPerHouse[i])
+                if (DemandPerHouse[s] == 0 || DemandPerHouse[s] < 0)
                 {
-                    work_units += steps * Math.Abs(DemandPerHouse[j]);
-                    DemandPerHouse[i] += DemandPerHouse[j];
-                    DemandPerHouse[j] = 0;
+                    s++;
+                    continue;
                 }
-                else
+                Int64 distance = 0, trade = 0, index_of_demander = demanders.Peek();
+                distance = (Int64)Math.Abs(s - index_of_demander);
+                trade = (Int64)Math.Min(DemandPerHouse[s], -DemandPerHouse[(int)index_of_demander]);
+                work_done += trade * distance;
+                DemandPerHouse[s] -= (int)trade;
+                DemandPerHouse[(int)index_of_demander] += (int)trade;
+                if (DemandPerHouse[s] == 0)
                 {
-                    work_units += steps * DemandPerHouse[i];
-                    DemandPerHouse[j] += DemandPerHouse[i];
-                    DemandPerHouse[i] = 0;
+                    s++;
                 }
-                temp++;
+                if (DemandPerHouse[(int)index_of_demander] == 0)
+                {
+                    demanders.Pop();
+                }
             }
-            return work_units;
+            return work_done;
+            
         }
         #endregion
     }
