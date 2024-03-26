@@ -29,43 +29,35 @@ namespace Problem
             //REMOVE THIS LINE BEFORE START CODING
             //throw new NotImplementedException();
             Int64 work_done = 0;
-            Stack<Int64> demanders = new Stack<Int64>();
-            for (int i = N - 1; i >= 0; i--)
+            Int64 number_of_bread = 0;
+            for (int i = 0; i < N; i++)
             {
                 if (DemandPerHouse[i] < 0)
                 {
-                    demanders.Push((Int64)i);
+                    if (number_of_bread < 0)
+                    {
+                        work_done += (-1 * number_of_bread);
+                    }
+                    else
+                    {
+                        work_done += number_of_bread;
+                    }
+                    number_of_bread += DemandPerHouse[i];
                 }
-            }
-            int s = 0;
-            while (s < N)
-            {
-                if (demanders.Count == 0)
+                else if (DemandPerHouse[i] > 0)
                 {
-                    break;
-                }
-                if (DemandPerHouse[s] == 0 || DemandPerHouse[s] < 0)
-                {
-                    s++;
-                    continue;
-                }
-                Int64 distance = 0, trade = 0, index_of_demander = demanders.Peek();
-                distance = (Int64)Math.Abs(s - index_of_demander);
-                trade = (Int64)Math.Min(DemandPerHouse[s], -DemandPerHouse[(int)index_of_demander]);
-                work_done += trade * distance;
-                DemandPerHouse[s] -= (int)trade;
-                DemandPerHouse[(int)index_of_demander] += (int)trade;
-                if (DemandPerHouse[s] == 0)
-                {
-                    s++;
-                }
-                if (DemandPerHouse[(int)index_of_demander] == 0)
-                {
-                    demanders.Pop();
+                    if (number_of_bread < 0)
+                    {
+                        work_done += (-1 * number_of_bread);
+                    }
+                    else
+                    {
+                        work_done += number_of_bread;
+                    }
+                    number_of_bread += DemandPerHouse[i];
                 }
             }
             return work_done;
-            
         }
         #endregion
     }
