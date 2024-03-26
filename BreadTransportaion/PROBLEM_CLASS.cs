@@ -28,7 +28,7 @@ namespace Problem
         {
             //REMOVE THIS LINE BEFORE START CODING
             //throw new NotImplementedException();
-            Int64 work_done = 0;
+            /*Int64 work_done = 0;
             Int64 number_of_bread = 0;
             for (int i = 0; i < N; i++)
             {
@@ -56,6 +56,21 @@ namespace Problem
                     }
                     number_of_bread += DemandPerHouse[i];
                 }
+            }
+            return work_done;*/
+            Int64 work_done = 0;
+            Int64 number_of_bread = 0;
+            for (int i = 0; i < N; i++)
+            {
+                if (number_of_bread < 0)
+                {
+                    work_done += (-1 * number_of_bread);
+                }
+                else
+                {
+                    work_done += number_of_bread;
+                }
+                number_of_bread += DemandPerHouse[i];
             }
             return work_done;
         }
